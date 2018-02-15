@@ -12,5 +12,6 @@
 		<module>cherry-base</module>
 		<module>cherry-eureka</module>
 		<module>cherry-discovery</module>
+		<module>cherry-test</module>
 	</modules>
 </project>
