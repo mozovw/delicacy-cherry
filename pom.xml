@@ -13,5 +13,6 @@
 		<module>cherry-eureka</module>
 		<module>cherry-discovery</module>
 		<module>cherry-test</module>
+        <module>cherry-config</module>
 	</modules>
 </project>
