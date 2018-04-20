@@ -11,9 +11,9 @@ import javax.annotation.Resource;
 @Slf4j
 class UserServiceImpl implements UserService{
 
-//	@Autowired
-	@Resource(name = "messageService")
-	private MessageServiceImpl messageService;
+	@Autowired
+	//@Resource(name = "messageService")
+	private MessageService messageService;
 
 	@Override
 	public String receiveMessage() {

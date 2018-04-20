@@ -12,5 +12,5 @@ interface UserService {
 	String receiveMessage();
 
 	@RequestMapping(value = "/sendMessage",method = RequestMethod.GET)
-	String sendMessage(@RequestParam String message);
+	String sendMessage(@RequestParam("message") String message);
 }
