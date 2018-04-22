@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@RestController
+@RestController("MessageService")
 class MessageServiceImpl implements MessageService{
 
     private static ThreadLocal<String> message = new ThreadLocal<>();

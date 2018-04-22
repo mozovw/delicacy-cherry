@@ -12,7 +12,6 @@ import javax.annotation.Resource;
 class UserServiceImpl implements UserService{
 
 	@Autowired
-	//@Resource(name = "messageService")
 	private MessageService messageService;
 
 	@Override
