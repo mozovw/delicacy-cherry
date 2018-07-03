@@ -23,7 +23,7 @@ import java.util.Map;
  * @author zyt
  * @create 2018-04-11 18:37
  **/
-@EnableBinding({MqMessageSource.class,Source.class})
+@EnableBinding({MqMessageSource.class})
 @RestController
 public class MqMessageProducer {
 
@@ -31,16 +31,7 @@ public class MqMessageProducer {
     @Output(MqMessageSource.MESSAGE_OUTPUT)
     private MessageChannel msgchannel;
 
-    @Autowired
-    @Output(Source.OUTPUT)
-    private MessageChannel channel;
-
     @PostMapping( "/send")
-    public void write (@RequestBody Map<String, Object> msg){
-        channel.send(MessageBuilder.withPayload(msg).build());
-    }
-
-    @PostMapping( "/sendUser")
     public void send(@RequestBody User user){
         msgchannel.send(MessageBuilder.withPayload(user).build());
     }

@@ -15,21 +15,25 @@ import java.util.Map;
  * @author zyt
  * @create 2018-04-11 18:40
  **/
-@EnableBinding({MqMessageSource.class,Sink.class})
+@EnableBinding({MqMessageSource.class})
 public class MqMessageConsumer {
 
-    @ServiceActivator(inputChannel=Sink.INPUT)
+    /*@ServiceActivator(inputChannel=Sink.INPUT)
     public void accept(Map<String, Object> msg){
         System.out.println(msg.get("msg").toString() + ":" + msg.get("name"));
-    }
+    }*/
 
-    @SendTo(MqMessageSource.MESSAGE_OUTPUT)
+    /*@SendTo(MqMessageSource.MESSAGE_OUTPUT)
     @StreamListener(MqMessageSource.MESSAGE_INPUT)
     public String accept(Object msg){
         System.out.println(msg);
         return "sucess";
-    }
+    }*/
 
+    @StreamListener(MqMessageSource.MESSAGE_INPUT)
+    public void accept(Object msg){
+        System.out.println(msg);
+    }
 
 
 
