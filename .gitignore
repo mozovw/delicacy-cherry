@@ -8,3 +8,4 @@ out/
 .factorypath
 .project
 *.iml
+!/cherry-config/cherry-config-repo/test/

@@ -7,11 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@FeignClient("cherry-eureka-discovery")
+@FeignClient(value = "cherry-eureka-discovery",fallback = MessageServiceImpl.class)
 interface MessageService {
-
-	@RequestMapping(value = "/getMessage",method = RequestMethod.GET)
-	String getMessage();
 
 	@RequestMapping(value = "/setMessage",method = RequestMethod.GET)
 	String setMessage(@RequestParam("message")  String message);

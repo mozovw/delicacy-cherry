@@ -10,12 +10,6 @@ class MessageServiceImpl implements MessageService{
     private static ThreadLocal<String> message = new ThreadLocal<>();
 
 	@Override
-	public String getMessage() {
-		log.info(Thread.currentThread().getName());
-		return this.message.get();
-	}
-
-	@Override
 	public String setMessage(String message) {
 		log.info(Thread.currentThread().getName());
 		this.message.set(message);
