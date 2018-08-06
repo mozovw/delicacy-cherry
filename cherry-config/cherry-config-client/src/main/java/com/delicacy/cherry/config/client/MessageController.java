@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
-class MessageRestController {
+class MessageController {
 
 	@Value("${message:Hello default}")
     private String message;
