@@ -14,5 +14,7 @@
 		<module>cherry-test</module>
         <module>cherry-config</module>
         <module>cherry-zuul</module>
+        <module>cherry-hystrix</module>
+        <module>cherry-feign</module>
     </modules>
 </project>
