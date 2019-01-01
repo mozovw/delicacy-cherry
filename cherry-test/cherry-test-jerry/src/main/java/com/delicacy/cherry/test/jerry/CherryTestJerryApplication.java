@@ -1,4 +1,4 @@
-package com.delicacy.cherry.eureka.discovery;
+package com.delicacy.cherry.test.jerry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.delicacy")
-public class CherryEurekaDiscoveryApplication {
+public class CherryTestJerryApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CherryEurekaDiscoveryApplication.class, args);
-    }
-
+	public static void main(String[] args) {
+		SpringApplication.run(CherryTestJerryApplication.class, args);
+	}
 }

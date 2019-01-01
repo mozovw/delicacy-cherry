@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-class MessageServiceImpl implements MessageService{
+public class MessageServiceImpl implements MessageService{
 
 	@Override
 	public String sendMessage(String message) {

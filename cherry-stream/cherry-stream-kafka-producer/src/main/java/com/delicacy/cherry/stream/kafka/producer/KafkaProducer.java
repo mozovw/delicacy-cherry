@@ -41,7 +41,7 @@ public class KafkaProducer {
     @Accessors(chain = true)
     static class User implements Serializable {
         private static final long serialVersionUID = 771055052101012653L;
-        private String name = "tom";
+        private String name = "consumer";
         private int age = 12;
     }
 
