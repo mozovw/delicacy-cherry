@@ -20,7 +20,7 @@ public class MqMessageConsumer {
 
     /*@ServiceActivator(inputChannel=Sink.INPUT)
     public void accept(Map<String, Object> msg){
-        System.out.println(msg.get("msg").toString() + ":" + msg.get("name"));
+        System.out.println(msg.get("msg").toString() + ":" + msg.get("username"));
     }*/
 
     /*@SendTo(MqMessageSource.MESSAGE_OUTPUT)

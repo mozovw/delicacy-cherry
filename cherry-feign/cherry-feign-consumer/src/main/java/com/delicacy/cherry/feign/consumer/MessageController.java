@@ -26,7 +26,7 @@ public class MessageController {
         return messageService.sendMessage(message, timeout);
     }
 
-    @GetMapping("2/sendMessage")
+    @GetMapping("/sendMessage2")
     public String sendMessage2(String message, @RequestParam(required = false) Integer timeout) {
         log.info("message={}", message);
         countdown(timeout);
